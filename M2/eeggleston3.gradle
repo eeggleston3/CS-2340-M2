@@ -1,0 +1,28 @@
+defaultTasks 'jar'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+version = '1.0'
+mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+jar  {
+    manifest {
+        attributes  ('Implementation-Title' : 'mprouty6' ,
+                'Implementation-Version' : version,
+                'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path' : 'lib/resources.jar')
+    }
+
+    destinationDir = file(".")
+    archiveName = 'antlab.jar'
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+repositories {
+    mavenCentral()
+}
