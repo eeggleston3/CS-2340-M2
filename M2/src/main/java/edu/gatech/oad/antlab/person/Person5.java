@@ -33,10 +33,10 @@ public class Person5 {
 		//Person 5 put your implementation here
 		String temp = "";
 		for (int i = 2; i < input.length(); i++) {
-			temp += input[i];
+			temp += input.charAt(i);
 		}
-		temp += input[0];
-		temp += input[1];
+		temp += input.charAt(0);
+		temp += input.charAt(1);
 		return temp;
 	}
 
